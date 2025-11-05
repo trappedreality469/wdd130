@@ -1,0 +1,118 @@
+/* nathaniel backlund funny awesome styles n stuff 
+
+* added darkmode, made sections obvious and seperated, shadowing around pictures and sections, links react to hovering, also mt rushmore is here now */
+
+/* general */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e;
+  margin: 0;
+  padding: 0;
+  color: #e4e4e4;
+}
+
+/* THE main styling */
+main {
+  max-width: 840px;
+  width: 90%;
+  margin: 20px auto;
+  border: 1px solid #333;
+  padding: 20px;
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+/* main parent styling */
+main h1 {
+  text-align: center;
+  color: #81b3ff;
+  border-bottom: 2px solid #81b3ff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* my picture (of myself) */
+main img {
+  display: block;
+  width: 150px;
+  height: auto;
+  margin: 0 auto 15px auto;
+  border-radius: 8px;
+  border: 1px solid steelblue;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  padding: 2px;
+}
+
+/* Aside section */
+aside {
+  max-width: 840px;
+  width: 90%;
+  margin: 20px auto;
+  border: 1px solid #333;
+  padding: 20px;
+  background-color: #242424;
+  color: #eaeaea;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+/* Mount Rushmore picture */
+aside img {
+  display: block;
+  width: 200px;
+  height: auto;
+  margin: 0 auto 15px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* para */
+p {
+  padding: 0px;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+/* header */
+header {
+  background-color: #0e1a33;
+  color: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  text-align: center;
+  background-color: #0e1a33;
+  padding: 0px;
+}
+
+nav a {
+  color: #b3d1ff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s;
+  padding: 0px;
+  display: block;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* footer */
+footer {
+  max-width: 840px;
+  width: 90%;
+  margin: 40px auto 20px auto;
+  margin-top: 1em;
+  border-top: 2px solid #333;
+  text-align: center;
+  padding-top: 15px;
+  color: #aaa;
+  font-size: 0.9em;
+}
