@@ -1,0 +1,174 @@
+/* CSS variables */
+:root{
+  --primary-color: #055a05;    /* deep green (example) */
+  --secondary-color: #f4a261;  /* warm sand */
+  --accent1-color: #264653;    /* dark slate */
+  --accent2-color: #e9c46a;    /* light gold */
+  --heading-font: "Georgia", "Times New Roman", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* universal reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background: #fff;
+  line-height: 1.5;
+}
+
+/* layout width and center */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* Header layout */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+/* brand logo */
+.logo{
+  width: 80px;
+  height: auto;
+  display: block;
+}
+
+/* main nav */
+.mainnav ul{
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.mainnav a{
+  text-decoration: none;
+  color: var(--accent1-color);
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.mainnav a:hover,
+.mainnav a.active {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+/* Hero section */
+.hero{
+  position: relative;
+  margin-top: 16px;
+}
+
+/* make the hero image stretch full width of container */
+.hero img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* overlay heading */
+.hero h1{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  background-color: rgba(38,70,83,0.75); /* semi-opaque dark overlay */
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* article overlay box (placed over lower-left of hero image) */
+.hero article{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 55%;
+  background: rgba(255,255,255,0.95);
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  color: var(--accent1-color);
+}
+
+/* client image floating to right inside the article (matches spec: float right & width 125px) */
+.hero article img{
+  float: right;
+  width: 125px;
+  height: auto;
+  margin-left: 12px;
+  border-radius: 4px;
+}
+
+/* paragraph inside article will wrap around the floated image */
+.hero article p{
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+section{
+  margin: 20px 16px;
+  padding: 8px;
+}
+
+h1, h2{
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+footer{
+  margin: 24px auto;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer p{
+  color: var(--accent1-color);
+}
+
+/* social icons */
+.socialmedia a{
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.socialmedia img{
+  width: 36px;
+  height: 36px;
+  display: block;
+/*vertical-align: middle;*/
+}
+
+/* resize for other monitor sizes */
+@media (max-width: 900px){
+  header, main, footer {
+    width: 96%;
+  }
+  .hero article{
+    width: 72%;
+    left: 12px;
+    right: 12px;
+  }
+  .mainnav ul{
+    gap: 10px;
+  }
+}

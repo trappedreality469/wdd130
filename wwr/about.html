@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="About Us — Whitewater Rafting Co." />
+  <meta name="author" content="Nathaniel Backlund" />
+  <title>Whitewater Rafting Co. — About</title>
+
+  <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <!-- Example logo from course — replace with your own if desired -->
+      <img src="images/logo.png" alt="WWR Logo" class="logo">
+    </div>
+
+    <nav class="mainnav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <!-- hero image from the course repo -->
+      <img src="images/rafting14_1024.jpg" alt="Rafting hero image">
+      <h1>Whitewater Rafting Company</h1>
+
+      <article>
+        <!-- small client/participant image -->
+        <img src="images/rafting65_600.jpg" alt="Happy clients" />
+        <p>
+          We provide thrilling and safe whitewater rafting adventures for all skill levels.
+          Our experienced guides lead unforgettable trips on scenic rivers, with all gear provided.
+        </p>
+      </article>
+    </div>
+
+    <section>
+      <h2>History</h2>
+      <p>
+        Founded to share the love of rivers and excitement of rafting, our company has guided thousands
+        of guests through rapids and calm stretches alike. We focus on safety, stewardship of waterways,
+        and creating memories.
+      </p>
+    </section>
+
+    <section>
+      <h2>Adventure Awaits You!</h2>
+      <p>(Images and trip previews will be added in the next assignment.)</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Whitewater Rafting Co. — Nathaniel Backlund</p>
+    <nav class="socialmedia">
+      <a href="https://facebook.com" target="_blank" rel="noopener">
+        <img src="images/icons/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener">
+        <img src="images/icons/twitter.png" alt="Twitter">
+      </a>
+      <a href="instagram.com" target="_blank" rel="noopener">
+        <img src="images/icons/instagram.png" alt="Instagram">
+      </a>
+    </nav>
+  </footer>
+
+  <script>
+    // small convenience: update year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
