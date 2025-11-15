@@ -2,6 +2,13 @@
 
 * added darkmode, made sections obvious and seperated, shadowing around pictures and sections, links react to hovering, also mt rushmore is here now */
 
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* general */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -35,6 +42,7 @@ main h1 {
 
 /* my picture (of myself) */
 main img {
+  float: right;
   display: block;
   width: 150px;
   height: auto;
@@ -47,8 +55,10 @@ main img {
 
 /* Aside section */
 aside {
+  text-align: center;
+  position: relative;
   max-width: 840px;
-  width: 90%;
+  width: 20em;
   margin: 20px auto;
   border: 1px solid #333;
   padding: 20px;
@@ -61,11 +71,19 @@ aside {
 /* Mount Rushmore picture */
 aside img {
   display: block;
-  width: 200px;
+  width: 400px;
   height: auto;
   margin: 0 auto 15px auto;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* State/Country Title in picture */
+aside h2 {
+  position: absolute;
+  top: 5%;
+  left: 38%;
+  color: steelblue;
 }
 
 /* para */
@@ -86,7 +104,11 @@ header {
 nav {
   text-align: center;
   background-color: #0e1a33;
-  padding: 0px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 40px;
 }
 
 nav a {
@@ -107,7 +129,7 @@ nav a:hover {
 /* footer */
 footer {
   max-width: 840px;
-  width: 90%;
+  width: 20em;
   margin: 40px auto 20px auto;
   margin-top: 1em;
   border-top: 2px solid #333;
@@ -115,4 +137,37 @@ footer {
   padding-top: 15px;
   color: #aaa;
   font-size: 0.9em;
+}
+
+/* Class Selectors */
+.box {
+  margin: 1rem auto;
+  border: 1px solid #333;
+  padding: 1rem;
+  background-color: #242424;
+  color: #eaeaea;
+  max-width: 840px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}  
+
+/* link colors */
+a:link {
+  color: #81b3ff; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(155, 54, 155);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+a:active {
+  color: red;
 }
