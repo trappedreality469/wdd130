@@ -1,4 +1,4 @@
-/* CSS variables */
+/* root CSS variables */
 :root{
   --primary-color: #055a05;    /* deep green (example) */
   --secondary-color: #f4a261;  /* warm sand */
@@ -7,8 +7,7 @@
   --heading-font: "Georgia", "Times New Roman", serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
-
-/* universal reset */
+/* universal selector reset */
 * {
   margin: 0;
   padding: 0;
@@ -141,7 +140,7 @@ footer{
 }
 
 footer p{
-  color: var(--accent2-color);
+  color: var(--primary-color);
 }
 
 /* social icons */
