@@ -41,9 +41,10 @@ header, .grid, footer {
 main {
   max-width: 1000px;
   width: 90%;
-  margin: 2rem auto;
+  margin: 1rem;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-column: 2/2;
+  float: right;
   gap: 2rem;
   border: 1px solid #333;
   padding: 20px;
@@ -80,10 +81,12 @@ aside {
   text-align: center;
   position: relative;
   max-width: 840px;
-  width: 20rem;
+  width: 90%;
   margin: 20px auto;
   grid-column: 1/2;
-  grid-row: 2/2;
+  grid-row: 1/2;
+  float: left;
+  margin-left: 0px;
   border: 1px solid #333;
   padding: 20px;
   background-color: #242424;
@@ -105,9 +108,9 @@ aside img {
 /* State/Country Title in picture */
 aside h2 {
   position: absolute;
-  top: 5%;
-  left: 38%;
-  color: steelblue;
+  top: 3%;
+  left: 30%;
+  color: rgb(0, 140, 255);
 }
 
 /* para */
