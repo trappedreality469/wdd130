@@ -1,16 +1,14 @@
 /* root CSS variables */
 :root{
   --primary-color: #055a05;    /* deep green (example) */
-  --secondary-color: #c45800;  /* warm sand */
+  --secondary-color: #ff7300;  /* warm sand */
   --accent1-color: #264653;    /* dark slate */
-  --accent2-color: #c45800;    /* light gold */
+  --accent2-color: #ff7300;    /* light gold */
   --heading-font: "Georgia", "Times New Roman", serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
 
 /* universal selector reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
 * {
     margin: 0;
     padding: 0;
@@ -105,6 +103,7 @@ header{
   border-radius: 6px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   color: var(--accent1-color);
+  font-family: var(--body-font);
 }
 
 .hero article img{
@@ -134,6 +133,7 @@ h1, h2{
 .history {
   margin: 40px 0;
   padding: 5px;
+  font-family: var(--body-font);
 }
 
 .history h2 {
@@ -163,6 +163,7 @@ h1, h2{
 .adventures {
   margin: 40px 0;
   padding: 5px;
+  font-family: var(--body-font);
 }
 
 .adventures h2 {
