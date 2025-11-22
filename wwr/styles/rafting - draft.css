@@ -7,7 +7,6 @@
   --heading-font: "Georgia", "Times New Roman", serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
-
 /* universal selector reset */
 * {
   margin: 0;
@@ -34,6 +33,8 @@ header{
   grid-template-columns: 120px 1fr;
   align-items: center;
   padding: 18px 0;
+  width: 840px;
+  margin: 0 auto;
 }
 
 .brand{
@@ -71,110 +72,32 @@ header{
   color: #fff;
 }
 
-/* Hero section */
-.hero{
-  position: relative;
-  margin-top: 16px;
-}
+/* History Grid */
 
-.hero img{
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-/* overlay heading */
-.hero h1{
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  font-family: var(--heading-font);
-  font-size: 2rem;
-  background-color: rgba(38,70,83,0.75);
-  color: #fff;
-  opacity: 0.9;
-}
-
-/* article overlay box */
-.hero article{
-  position: absolute;
-  bottom: 50px;
-  left: 20px;
-  width: 95%;
-  background: rgba(255,255,255,0.95);
-  padding: 12px;
-  border-radius: 6px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  color: var(--accent1-color);
-}
-
-.hero article img{
-  float: right;
-  width: 125px;
-  height: auto;
-  margin-left: 12px;
-  border-radius: 4px;
-}
-
-.hero article p{
-  margin-top: 4px;
-  font-size: 0.95rem;
-}
-
-section{
-  margin: 20px 16px;
-  padding: 8px;
-}
-
-h1, h2{
-  font-family: var(--heading-font);
-  color: var(--accent2-color);
-}
-
-/* history grid */
-.history {
+section.history {
   margin: 40px 0;
-  padding: 5px;
-}
-
-.history h2 {
-  text-align: center;
-  margin-bottom: 5px;
-  font-family: var(--heading-font);
-  color: var(--accent2-color);
 }
 
 .history-grid {
   display: grid;
-  grid-template-columns: 1fr 160px 1fr;
-  gap: 30px;
-  align-items: start;
-  padding: 20px;
+  grid-template-columns: 1fr 220px 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 .history-grid img {
-  width: 160px;
-  height: auto;
-  justify-self: center;
+  width: 100%;
   border-radius: 6px;
-  display: block;
 }
 
-/* adventure section*/
+/* Adventure Section */
+
 .adventures {
   margin: 40px 0;
-  padding: 5px;
-}
-
-.adventures h2 {
-  text-align: center;
-  margin-bottom: 5px;
-  font-family: var(--heading-font);
-  color: var(--accent2-color);
+  padding: 20px;
 }
 
 .adventure-gallery {
@@ -198,7 +121,74 @@ h1, h2{
   margin-top: 6px;
 }
 
-/* footer */
+
+/* Hero section */
+.hero{
+  position: relative;
+  margin-top: 16px;
+}
+
+/* make the hero image stretch full width of container */
+.hero img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* overlay heading */
+.hero h1{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  background-color: rgba(38,70,83,0.75);
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* article overlay box (placed over lower-left of hero image) */
+.hero article{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 55%;
+  background: rgba(255,255,255,0.95);
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  color: var(--accent1-color);
+}
+
+/* client image floating to right inside the article */
+.hero article img{
+  float: right;
+  width: 125px;
+  height: auto;
+  margin-left: 12px;
+  border-radius: 4px;
+}
+
+/* paragraph inside article will wrap around the floated image */
+.hero article p{
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+section{
+  margin: 20px 16px;
+  padding: 8px;
+}
+
+h1, h2{
+  font-family: var(--heading-font);
+  color: var(--accent2-color);
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -221,6 +211,7 @@ footer p{
 .socialmedia a{
   text-decoration: none;
   display: inline-block;
+  margin-left: 8px;
 }
 
 .socialmedia img{
@@ -241,11 +232,5 @@ footer p{
   }
   .mainnav ul{
     gap: 10px;
-  }
-
-  /* stack history grid on small screens */
-  .history-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
   }
 }
