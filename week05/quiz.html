@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles/quiz.css" />
+</head>
+<body>
+  <header>
+    <h1>HTML & CSS Understanding Quiz</h1>
+    <p>We appreciate your work — we want to help you improve!</p>
+  </header>
+  <main>
+    <form>
+      <div class="form-group">
+        <label for="q1">What does HTML stand for?</label>
+        <input type="text" id="q1" name="q1" placeholder="Enter your answer here" required>
+      </div>
+      <div class="form-group">
+        <label for="q2">Where in an HTML document is the correct place to refer to an external style sheet?</label>
+        <textarea id="q2" name="q2" placeholder="Your thoughts..." rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="q3">Choose the correct HTML element for the largest heading:</label>
+        <select id="q3" name="q3">
+          <option value="">-- Please choose --</option>
+          <option value="h1">h1</option>
+          <option value="heading">heading</option>
+          <option value="h6">h6</option>
+          <option value="head">head</option>
+          <option value="None of the above">None of the above</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="q4">How many letters are in the word HTML?</label>
+        <input type="number" id="q4" name="q4" min="0" placeholder="e.g. 5" required>
+      </div>
+      <button type="submit">Submit Survey</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2025 Nathaniel Backlund</p>
+  </footer>
+</body>
+</html>
