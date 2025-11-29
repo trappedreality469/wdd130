@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Contact Us - White Water Rafting Company">
+    <meta name="author" content="Nathaniel Backlund">
+    <title>Contact Us - Whitewater Rafting Co.</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img src="images/logo.png" alt="WWR Logo" class="logo">
+        </div>
+        <nav class="mainnav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contact-hero">
+            <img src="images/rafting14_1024.jpg" alt="Rafting adventure">
+            <h1>Contact Us</h1>
+        </div>
+        <section class="contact-info">
+            <h2>Company Information</h2>
+            <ul>
+                <li><strong>Address:</strong> 123 River Run Road, Salmon, ID 83467</li>
+                <li><strong>Phone:</strong> (208) 555-0199</li>
+                <li><strong>Email:</strong> info@wwraftingco.com</li>
+            </ul>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2770.639893475494!2d-113.89740248444724!3d45.17548697909853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x535ac9bab621b1dd%3A0x9c4c0f68bd2d96ff!2sSalmon%2C%20ID!5e0!3m2!1sen!2sus!4v1707000000000"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </section>
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="contact-form-handler.php" method="post">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <fieldset>
+                    <legend>Purpose of Message</legend>
+                    <label><input type="radio" name="purpose" value="general" required> General Inquiry</label>
+                    <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                    <label><input type="radio" name="purpose" value="feedback"> Website Feedback</label>
+                </fieldset>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+                <label class="newsletter-label">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    Subscribe me to the monthly newsletter
+                </label>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+        <section class="employee-profiles">
+            <h2>Meet Our Team</h2>
+            <div class="employee-grid">
+                <figure>
+                    <img src="images/employees/guide1.png" alt="Lead Guide">
+                    <figcaption>
+                        <strong>Sarah Thompson</strong><br>
+                        Lead River Guide
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employees/guide2.png" alt="Safety Director">
+                    <figcaption>
+                        <strong>Mark Reynolds</strong><br>
+                        Safety Director
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employees/guide3.png" alt="Guest Coordinator">
+                    <figcaption>
+                        <strong>Ashley Carter</strong><br>
+                        Guest Experience Coordinator
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    <footer>
+        <p>© 2025 Whitewater Rafting Co. — Nathaniel Backlund</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com" target="_blank" rel="noopener">
+                <img src="images/icons/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener">
+                <img src="images/icons/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener">
+                <img src="images/icons/instagram.png" alt="Instagram">
+            </a>
+        </nav>
+    </footer>
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+    const name = document.getElementById("fullname");
+    const email = document.getElementById("email");
+    const radioChecked = document.querySelector("input[name='purpose']:checked");
+
+    if (!name.value.trim()) {
+        alert("Please enter your full name.");
+        name.focus();
+        e.preventDefault();
+        return;
+    }
+
+    if (!email.value.trim()) {
+        alert("Please enter a valid email address.");
+        email.focus();
+        e.preventDefault();
+        return;
+    }
+
+    if (!radioChecked) {
+        alert("Please choose a purpose for your message.");
+        e.preventDefault();
+        return;
+    }
+});
+</script>
+</body>
+</html>

@@ -245,4 +245,168 @@ footer p{
     grid-template-columns: 1fr;
     text-align: center;
   }
+  /* mobile contact page */
+.contact-hero h1 {
+  font-size: 1.6rem;
+  padding: 10px;
+}
+
+.employee-grid {
+  flex-direction: column;
+  align-items: center;
+}
+
+.employee-grid figure {
+  max-width: 260px;
+}
+
+.contact-info iframe {
+  height: 250px;
+}
+
+.contact-form form {
+  gap: 18px;
+}
+
+.contact-form button {
+  padding: 14px 0;
+  font-size: 1.1rem;
+}
+}
+
+/* contact.html styling */
+
+/* hero banner */
+.contact-hero {
+  position: relative;
+  margin: 20px 0;
+}
+
+.contact-hero img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.contact-hero h1 {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(38,70,83,0.75);
+  padding: 12px 0;
+  border-radius: 0 0 6px 6px;
+}
+
+/* company info + map */
+.contact-info {
+  font-family: var(--body-font);
+  margin: 30px 16px;
+}
+
+.contact-info ul {
+  list-style: none;
+  margin-bottom: 20px;
+  line-height: 1.45;
+}
+
+.contact-info iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 6px;
+}
+
+/* form layout */
+.contact-form {
+  margin: 40px 16px;
+  font-family: var(--body-font);
+}
+
+.contact-form form {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-form fieldset {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.contact-form legend {
+  padding: 0 6px;
+  font-weight: bold;
+}
+
+.contact-form button {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 12px 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: var(--secondary-color);
+}
+
+/* newsletter checkbox spacing */
+.newsletter-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* employee things */
+.employee-profiles {
+  margin: 20px 1000px;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+.employee-profiles h2 {
+  font-family: var(--heading-font);
+  color: var(--accent2-color);
+  margin-bottom: 20px;
+}
+
+.employee-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.employee-grid figure {
+  flex: 1;
+  text-align: center;
+}
+
+.employee-grid img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.employee-grid figcaption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: var(--accent1-color);
 }
