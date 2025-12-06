@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Have an adventure — White Water Rafting. Trips for all skill levels. Schedule a trip or contact an associate!">
+    <meta name="author" content="Nathaniel Backlund">
+    <title>Home - White Water Rafting</title>
+
+  <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header>
+        <div class="brand">
+        <img src="images/logo.png" alt="White Water logo" class="logo">
+        </div>
+
+    <nav class="mainnav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-root">
+    <section class="hero-spot">
+      <img src="images/hero.jpg" alt="Whitewater rafting action" class="hero-image">
+
+      <div class="hero-overlay" role="banner" aria-label="Welcome to White Water Rafting Co.">
+        <h1 class="hero-title">Have An Adventure</h1>
+        <p class="hero-sub">Make memories with us — guided trips for every skill level.</p>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="trips.html">Explore Trips & Book Now</a>
+          <a class="btn-muted" href="#newsletter">Join Our Newsletter</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" aria-labelledby="features-heading">
+      <h2 id="features-heading">What We Offer</h2>
+      <div class="features-grid">
+        <article class="feature-card">
+          <img src="images/feature-rivers.jpg" alt="River scenery">
+          <h3>Rivers</h3>
+          <p>From mellow floats to class IV rapids — we select the stretch that best fits your group's experience and goals.</p>
+          <a class="link-more" href="trips.html#rivers">See river trips →</a>
+        </article>
+
+        <article class="feature-card">
+          <img src="images/feature-camping.jpg" alt="Backcountry camping">
+          <h3>Camping</h3>
+          <p>Multi-day adventures with scenic campsites, hearty meals, and evenings around the fire under the stars.</p>
+          <a class="link-more" href="trips.html#multi-day">View multi-day trips →</a>
+        </article>
+
+        <article class="feature-card">
+          <img src="images/feature-rapids.jpg" alt="Rafting rapids">
+          <h3>Rapids</h3>
+          <p>Guides trained in swiftwater rescue keep safety top of mind so you can focus on the thrill of the run.</p>
+          <a class="link-more" href="trips.html#rapids">Find the right rapid →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="promo-grid" aria-labelledby="promo-heading">
+      <div class="promo-media">
+        <img src="images/promo-landscape.jpg" alt="Mountain valley landscape">
+      </div>
+
+      <div class="promo-text">
+        <h2 id="promo-heading">More Than Just The Thrill</h2>
+        <p>Enjoy the breathtaking scenery — valleys, meadows, canyons and high peaks. Our trips are curated to connect you with nature, push your limits safely, and leave you refreshed.</p>
+        <a class="btn-primary" href="trips.html">Join a Trip — Reserve Your Spot</a>
+      </div>
+    </section>
+
+    <section id="newsletter" class="newsletter" aria-labelledby="newsletter-heading">
+      <h2 id="newsletter-heading">Stay in the Loop</h2>
+      <p>Sign up for trip announcements, exclusive discounts, and river reports!</p>
+
+      <form class="newsletter-form" action="#" method="post" novalidate>
+        <div class="form-row">
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="name" type="text" required placeholder="Joseph Smith" aria-required="true">
+        </div>
+
+        <div class="form-row">
+          <label for="emailAddr">Email address</label>
+          <input id="emailAddr" name="email" type="email" required placeholder="you@example.com" aria-required="true">
+        </div>
+
+        <div class="form-row small">
+          <input id="consent" name="consent" type="checkbox">
+          <label for="consent" class="newsletter-label">I agree to receive weekly emails about trips & promos.</label>
+        </div>
+
+        <div class="form-row">
+          <button class="btn-primary" type="submit">Subscribe</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>White Water Rafting © 2025 — Nathaniel Backlund</p>
+    <nav class="socialmedia">
+      <a href="https://facebook.com" aria-label="Facebook"><img src="images/icons/facebook.png" alt=""></a>
+      <a href="https://twitter.com" aria-label="Twitter"><img src="images/icons/twitter.png" alt=""></a>
+      <a href="https://instagram.com" aria-label="Instagram"><img src="images/icons/instagram.png" alt=""></a>
+    </nav>
+  </footer>
+</body>
+</html>

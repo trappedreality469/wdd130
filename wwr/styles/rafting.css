@@ -49,6 +49,7 @@ header{
   gap: 24px;
   align-items: center;
   justify-content: flex-end;
+  font-family: var(--body-font);
 }
 
 .mainnav a{
@@ -226,56 +227,7 @@ footer p{
   display: block;
 }
 
-/* resize for other monitor sizes */
-@media (max-width: 900px){
-  header, main, footer {
-    width: 96%;
-  }
-  .hero article{
-    width: 72%;
-    left: 12px;
-    right: 12px;
-  }
-  .mainnav ul{
-    gap: 10px;
-  }
-
-  /* stack history grid on small screens */
-  .history-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  /* mobile contact page */
-.contact-hero h1 {
-  font-size: 1.6rem;
-  padding: 10px;
-}
-
-.employee-grid {
-  flex-direction: column;
-  align-items: center;
-}
-
-.employee-grid figure {
-  max-width: 260px;
-}
-
-.contact-info iframe {
-  height: 250px;
-}
-
-.contact-form form {
-  gap: 18px;
-}
-
-.contact-form button {
-  padding: 14px 0;
-  font-size: 1.1rem;
-}
-}
-
 /* contact.html styling */
-
 /* hero banner */
 .contact-hero {
   position: relative;
@@ -374,9 +326,11 @@ footer p{
 
 /* employee things */
 .employee-profiles {
-  margin: 20px 1000px;
+  margin: 40px auto;
+  max-width: 1000px;
   text-align: center;
   font-family: var(--body-font);
+  padding: 0 20px;
 }
 
 .employee-profiles h2 {
@@ -387,8 +341,9 @@ footer p{
 
 .employee-grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .employee-grid figure {
@@ -409,4 +364,350 @@ footer p{
   margin-top: 10px;
   font-size: 0.95rem;
   color: var(--accent1-color);
+}
+
+/* resize for other monitor sizes */
+@media (max-width: 900px) {
+  .employee-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .employee-grid figure {
+    max-width: 260px;
+    width: 100%;
+  }
+}
+
+/* index.html */
+/* layout container tweaks */
+.page-root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 20px 40px;
+}
+
+/* hero */
+.hero-spot {
+  position: relative;
+  margin-top: 12px;
+}
+/* gradient */
+.hero-spot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0)
+  );
+  z-index: 1;
+}
+
+.hero-spot .hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+}
+
+/* overlay on hero image */
+.hero-overlay {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: min(920px, 90%);
+  padding: 18px 22px;
+  background: rgba(6, 43, 34, 0.42);
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  z-index: 2;
+  font-family: var(--body-font);
+}
+
+.hero-title {
+  font-family: var(--heading-font);
+  font-size: 2.6rem;
+  margin-bottom: 6px;
+}
+
+.hero-sub {
+  margin-bottom: 12px;
+}
+
+/* buttons */
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-muted {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+.btn-muted {
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+}
+
+/* feature cards */
+.features {
+  margin-top: 40px;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: 0.18s ease;
+  font-family: var(--body-font);
+}
+
+.feature-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* had to force this because it wasn't fitting properly with my other example */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.feature-card h3 {
+  margin-bottom: 8px;
+  color: var(--accent1-color);
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature-card .link-more {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+}
+
+/* promo */
+.promo-grid {
+  position: relative;
+  margin: 50px 0;
+}
+
+.promo-media img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* overlay text on promo image */
+.promo-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(600px, 85%);
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.45);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(4px);
+  font-family: var(--body-font);
+}
+
+.promo-text h2 {
+  margin-bottom: 10px;
+}
+
+.promo-text p {
+  margin-bottom: 16px;
+}
+
+.promo-text .btn-primary {
+  border: 2px solid rgba(255,255,255,0.35);
+}
+
+/* newsletter */
+.newsletter {
+  margin-top: 25px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  font-family: var(--body-font);
+}
+
+.newsletter-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* normal rows */
+.newsletter-form .form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+/* checkbox row */
+.newsletter-form .form-row.small {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+#consent {
+  margin-right: 6px;
+}
+
+/* button row */
+.newsletter-form .form-row:last-child {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-start;
+  gap: 14px;
+}
+
+/* subscribe aligned right of text */
+.newsletter button[type="submit"] {
+  margin-left: auto;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .promo-text {
+    width: 90%;
+  }
+}
+
+@media (max-width: 680px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .promo-media img {
+    height: 320px;
+  }
+  .promo-text {
+    padding: 18px;
+  }
+  .newsletter-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* trips.html */
+.trip-descriptions {
+  padding: 3rem 2rem;
+  text-align: center;
+  font-family: var(--body-font);
+}
+
+.trip-grid {
+  display: grid;
+  margin-top: 2rem;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.trip-card {
+  background: white;
+  padding: 1.4rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  text-align: left;
+}
+
+.trip-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.trip-card h3 {
+  color: var(--accent2-color);
+  margin-bottom: .5rem;
+}
+
+.trip-card ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.table-wrapper {
+  padding: 2rem;
+  overflow-x: auto;
+  font-family: var(--body-font);
+}
+
+.trip-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.trip-table th,
+.trip-table td {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+}
+
+.trip-table th {
+  background: var(--accent2-color);
+  color: white;
+  text-align: left;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  font-family: var(--body-font);
 }
